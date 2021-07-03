@@ -11,7 +11,7 @@ from yahooquery import Ticker
 
 class TradingAlgo():
     
-    def __init__(self, key_id = "AK9W900XUIH31GEOI6GK", secret_key = "zPUzmZ8P54K9tQ4Xa0DKW1SHEl7GdP07LuD2yjDV"):
+    def __init__(self, key_id, secret_key):
         self.version = 1.1
         self.key_id = key_id
         self.secret_key = secret_key
