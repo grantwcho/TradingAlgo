@@ -1,11 +1,11 @@
 # Importing relevant modules
 import requests, re, datetime, math, datetime, schedule, time
-import pandas as pd
+import pandas_market_calendars as mcal
 import openpyxl as pxl
+import pandas as pd
 import numpy as np
 import alpaca_trade_api as tradeapi
 from alpaca_trade_api import StreamConn
-import pandas_market_calendars as mcal
 from bs4 import BeautifulSoup as soup
 from yahooquery import Ticker
 
