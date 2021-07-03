@@ -284,11 +284,11 @@ class TradingAlgo():
                 alpaca.cancel_all_orders() # cancel all stock orders to avoid double selling
             print("All stock orders cancelled and positions sold")
 
-    # ALL TIMES ARE IN EST
-    schedule.clear('daily-tasks')
-    schedule.every().day.at("09:35").do(buy).tag('daily-tasks')
-    schedule.every().day.at("15:55").do(sell).tag('daily-tasks')
+# ALL TIMES ARE IN EST
+schedule.clear('daily-tasks')
+schedule.every().day.at("09:35").do(TradingAlgo.buy).tag('daily-tasks')
+schedule.every().day.at("15:55").do(TradingAlgo.sell).tag('daily-tasks')
 
-    while True:
-        schedule.run_pending()
-        time.sleep(5)
+while True:
+    schedule.run_pending()
+    time.sleep(5)
